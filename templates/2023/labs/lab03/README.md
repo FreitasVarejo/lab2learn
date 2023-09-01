@@ -34,7 +34,13 @@ Estrutura de pastas:
 
 > Exemplo de modelo lógico relacional
 ~~~
-PESSOA(_Código_, Nome, Telefone)
-ARMÁRIO(_Código_, Tamanho, Ocupante)
-  Ocupante chave estrangeira -> PESSOA(Código)
+INGREDIENTE(_Nome_, Nutrientes)
+  Ocupante chave estrangeira -> PRATO(Indredientes)
+PRATO(_Nome_, Indredientes, Popularidade)
+  Indrediente chave estrangeira -> INGREDIENTE(Nome)
+CARDÁPIO(_Período_, Data, PerfilNutricional, Prato)
+  Prato chave estrangeira -> PRATO(Nome)
+Aluno(_Nome_, consome, compoe)
+  consome chave estrangeira -> PRATO(Nome)
+  compoe chave estrangeira -> INGREDIENTE(Nome)
 ~~~
